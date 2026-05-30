@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lecto Music Studio | Home</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e66a0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Lecto Studio">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="/new/img/IMG-20260517-WA0030.jpg" alt="Lecto Studio Logo" width="50">
+        <span class="logo-text">LECTO STUDIO</span>
+    </div>
+    
+    <nav>
+        <div class="links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="record.html"><i class="fas fa-microphone-alt"></i> Record</a>
+            <a href="sessions.html"><i class="fas fa-calendar-alt"></i> Sessions</a>
+            <a href="export.html"><i class="fas fa-download"></i> Export</a>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="hero">
+            <i class="fas fa-headphones hero-icon"></i>
+            <h1>LECTO MUSIC STUDIO</h1>
+            <h2>Professional Music Studio Management System</h2>
+            <p class="tagline"><i class="fas fa-star"></i> We Offer Professional Media Services for Your Music Projects <i class="fas fa-star"></i></p>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-drum"></i>
+                    <span>Beat Making</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-microphone"></i>
+                    <span>Voice Recording</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-video"></i>
+                    <span>Music Video</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Mixing & Mastering</span>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-palette"></i>
+                    <span>Artwork Design</span>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="record.html" class="btn-primary"><i class="fas fa-plus-circle"></i> New Session</a>
+                <a href="sessions.html" class="btn-secondary"><i class="fas fa-chart-line"></i> View Records</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><i class="far fa-copyright"></i> 2026 Lecto Music Studio. All rights reserved.</p>
+    </footer>
+
+    <div id="installPrompt" class="install-prompt" style="display: none;">
+        <i class="fas fa-download"></i>
+        <p>Install this app on your device</p>
+        <button id="installBtn"><i class="fas fa-plus"></i> Install</button>
+        <button id="closeInstall"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

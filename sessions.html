@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecto Studio - Sessions</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e66a0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+    <img src="/new/img/IMG-20260517-WA0030.jpg" alt="Lecto Studio Logo" width="50">
+        <span class="logo-text">LECTO STUDIO</span>
+    </div>
+    
+    <nav>
+        <div class="links">
+            <a href="record.html">🎵 New Session</a>
+            <a href="sessions.html" class="active">📋 View Sessions</a>
+            <a href="export.html">📥 Export Data</a>
+        </div>
+    </nav>
+    
+    <main>
+        <h1>📋 Session Records</h1>
+        <p class="tagline">Total Sessions: <span id="totalCount">0</span></p>
+        
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="🔍 Search by client or project...">
+            <select id="filterStatus">
+                <option value="all">All Sessions</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+            <button id="clearAllBtn" class="danger-btn">🗑️ Clear All</button>
+        </div>
+        
+        <div id="sessionsList" class="sessions-list">
+            <p>Loading sessions...</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Copyright © 2026 Lecto Music Studio. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

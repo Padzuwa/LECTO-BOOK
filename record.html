@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lecto Studio - New Session</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e66a0">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+    <img src="/new/img/IMG-20260517-WA0030.jpg" alt="Lecto Studio Logo" width="50">
+        <span class="logo-text">LECTO STUDIO</span>
+    </div>
+    
+    <nav>
+        <div class="links">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="record.html" class="active"><i class="fas fa-microphone-alt"></i> Record</a>
+            <a href="sessions.html"><i class="fas fa-calendar-alt"></i> Sessions</a>
+            <a href="export.html"><i class="fas fa-download"></i> Export</a>
+        </div>
+    </nav>
+    
+    <main>
+        <h1><i class="fas fa-head-side-headphones"></i> Record New Session</h1>
+        <p class="tagline">Track your music production sessions</p>
+        
+        <form id="sessionForm">
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Client Name</label>
+                <input type="text" id="clientName" placeholder="Enter client name" required>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-music"></i> Project / Song Name</label>
+                <input type="text" id="projectName" placeholder="Enter project name" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-calendar"></i> Date</label>
+                    <input type="date" id="sessionDate" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-clock"></i> Start Time</label>
+                    <input type="time" id="startTime" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-clock"></i> End Time</label>
+                    <input type="time" id="endTime" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-tag"></i> Service Type</label>
+                <select id="serviceType" required>
+                    <option value="">Select Service Type</option>
+                    <option value="Beat Making">🎹 Beat Making</option>
+                    <option value="Voice Recording">🎤 Voice Recording</option>
+                    <option value="Music Video">📹 Music Video</option>
+                    <option value="Mixing & Mastering">🎛️ Mixing & Mastering</option>
+                    <option value="Artwork Design">🎨 Artwork Design</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-sticky-note"></i> Session Notes</label>
+                <textarea id="notes" rows="3" placeholder="Equipment used, technical issues, client feedback..."></textarea>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-dollar-sign"></i> Amount Paid</label>
+                    <input type="number" id="amount" placeholder="0.00" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label class="checkbox">
+                        <input type="checkbox" id="completed"> <i class="fas fa-check-circle"></i> Session Completed
+                    </label>
+                </div>
+            </div>
+            
+            <button type="submit"><i class="fas fa-save"></i> Save Session</button>
+        </form>
+        
+        <div id="message" class="message"></div>
+    </main>
+    
+    <footer>
+        <p><i class="far fa-copyright"></i> 2026 Lecto Music Studio. All rights reserved.</p>
+    </footer>
+    
+    <div id="installPrompt" class="install-prompt" style="display: none;">
+        <i class="fas fa-download"></i>
+        <p>Install this app</p>
+        <button id="installBtn"><i class="fas fa-plus"></i> Install</button>
+        <button id="closeInstall"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

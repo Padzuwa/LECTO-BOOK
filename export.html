@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lecto Studio - Export Data</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0e66a0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Lecto Studio">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+     <img src="/new/img/IMG-20260517-WA0030.jpg" alt="Lecto Studio Logo" width="50">
+        <span class="logo-text">LECTO STUDIO</span>
+    </div>
+    
+    <nav>
+        <div class="links">
+            <a href="record.html"><i class="fas fa-microphone-alt"></i> Record</a>
+            <a href="sessions.html"><i class="fas fa-calendar-alt"></i> Sessions</a>
+            <a href="export.html" class="active"><i class="fas fa-download"></i> Export</a>
+        </div>
+    </nav>
+    
+    <main>
+        <h1><i class="fas fa-file-export"></i> Export Session Data</h1>
+        <p class="tagline">Download your sessions as spreadsheet files</p>
+        
+        <div class="export-options">
+            <div class="export-card">
+                <i class="fas fa-file-csv"></i>
+                <h3>CSV Format</h3>
+                <p>Compatible with Excel, Google Sheets, and Numbers</p>
+                <button id="exportCSVBtn"><i class="fas fa-download"></i> Download CSV</button>
+            </div>
+            
+            <div class="export-card">
+                <i class="fas fa-copy"></i>
+                <h3>Copy to Clipboard</h3>
+                <p>Copy all data as table format</p>
+                <button id="copyTableBtn"><i class="fas fa-clipboard"></i> Copy Table</button>
+            </div>
+            
+            <div class="export-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Statistics</h3>
+                <p>View revenue and session analytics</p>
+                <button id="viewStatsBtn"><i class="fas fa-chart-line"></i> View Stats</button>
+            </div>
+        </div>
+        
+        <div class="stats-preview">
+            <h3><i class="fas fa-chart-simple"></i> Data Summary</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="stat-label">Total Sessions</span>
+                    <span class="stat-number" id="totalSessions">0</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span class="stat-label">Total Revenue</span>
+                    <span class="stat-number" id="totalRevenue">0</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="stat-label">Completed</span>
+                    <span class="stat-number" id="completedCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hourglass-half"></i>
+                    <span class="stat-label">Pending</span>
+                    <span class="stat-number" id="pendingCount">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="message" class="message"></div>
+    </main>
+    
+    <footer>
+        <p><i class="far fa-copyright"></i> 2026 Lecto Music Studio. All rights reserved.</p>
+    </footer>
+    
+    <div id="installPrompt" class="install-prompt" style="display: none;">
+        <i class="fas fa-download"></i>
+        <p>Install this app</p>
+        <button id="installBtn"><i class="fas fa-plus"></i> Install</button>
+        <button id="closeInstall"><i class="fas fa-times"></i></button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
